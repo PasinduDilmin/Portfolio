@@ -4,10 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Pasindu Dilmin - IT Support Technician.">
-  <meta name="keywords" content="IT Support, Electronics, Physics, Undergraduate, Portfolio">
+  <meta name="description" content="Pasindu Dilmin - Web Administrator.">
+  <meta name="keywords"
+    content="Web Administrator, Sri Lanka Technology Campus, Electronics, Physics, Undergraduate, Portfolio">
   <meta name="author" content="Pasindu Dilmin">
-  <meta property="og:title" content="Pasindu Dilmin - IT Support Technician">
+  <meta property="og:title" content="Pasindu Dilmin - Web Administrator">
   <meta property="og:description"
     content="I am passionate about integrating Physics, Electronics, and IT to solve real-world problems.">
   <meta property="og:type" content="website">
@@ -16,6 +17,14 @@
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init({
+        publicKey: "zN_vjtellYEv504Yq",
+      });
+    })();
+  </script>
 
 
   <script>
@@ -303,8 +312,8 @@
             </h1>
             <p
               class="reveal d2 text-lg md:text-xl text-zinc-500 dark:text-zinc-400 font-light leading-relaxed max-w-md mb-10">
-              <strong class="font-medium text-zinc-700 dark:text-zinc-300">IT Support Technician</strong>. I am
-              passionate about integrating Electronics and IT to solve real-world
+              <strong class="font-medium text-zinc-700 dark:text-zinc-300">Web Administrator </strong>. I am passionate
+              about integrating Electronics and IT to solve real-world
               problems.
             </p>
             <div class="reveal d3 flex flex-wrap gap-4">
@@ -334,11 +343,11 @@
           <div class="reveal d2 flex justify-center md:justify-end">
             <div class="relative w-82 h-82 md:w-180 md:h-180 lg:w-90 lg:h-90">
               <div class="pf w-full h-full rounded-3xl">
-                <img src="Pasindu1.png" alt="Pasindu Dilmin" loading="eager">
+                <img src="Pasindu2.jpg" alt="Pasindu Dilmin" loading="eager">
               </div>
               <div
                 class="absolute -bottom-4 -left-4 bg-accent text-white font-display font-bold text-sm px-4 py-2.5 rounded-2xl shadow-lg">
-                IT Support Technician</div>
+                Web Administrator</div>
             </div>
           </div>
 
@@ -362,15 +371,26 @@
               Work Experience</h3>
             <article
               class="reveal d2 card-h group bg-white dark:bg-zinc-900 rounded-2xl p-8 border border-zinc-100 dark:border-zinc-800 hover:border-accent">
-              <span class="inline-block text-xs font-medium text-accent bg-accent/10 px-3 py-1 rounded-full mb-4">May
-                2025 - Present</span>
-              <h4 class="font-display font-bold text-xl text-zinc-900 dark:text-white mb-1">Intern IT Support</h4>
-              <p class="text-sm font-medium text-zinc-600 dark:text-zinc-400 mb-3">Sri Lanka Technology Campus (Pvt) Ltd
+              <h4 class="font-display font-bold text-xl text-zinc-900 dark:text-white mb-1">Sri Lanka Technology Campus
+                (Pvt) Ltd</h4><br><br>
+              <p class="text-sm font-medium text-zinc-600 dark:text-zinc-400 mb-3">Web Administrator
+                <span class="inline-block text-xs font-medium text-accent bg-accent/10 px-3 py-1 rounded-full">
+                  September 2026 - Present</span>
               </p>
               <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">
-                Motivated IT Support Technician with hands-on experience in software implementation monitoring, hardware
-                troubleshooting, and multi-device configuration. Skilled in diagnosing issues, configuring audio-visual
-                systems, API testing, and server maintenance.
+                Motivated Web Administrator with hands-on experience in website management, maintenance, content
+                updates, and server administration. Skilled in monitoring website performance, troubleshooting
+                web-related
+                issues, managing databases, configuring hosting environments, and ensuring website security,
+                availability, and smooth operation.
+              </p><br>
+              <p class="text-sm font-medium text-zinc-600 dark:text-zinc-400 mb-3">Intern IT
+                <span class="inline-block text-xs font-medium text-accent bg-accent/10 px-3 py-1 rounded-full ">
+                  May 2025 - August 2026</span>
+              </p>
+              <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">
+                Experienced IT Intern with a strong foundation in system administration and technical support.
+                Skilled in software implementation, hardware troubleshooting, API testing, and server maintenance.
               </p>
             </article>
           </div>
@@ -577,7 +597,7 @@
 
           <div class="reveal order-2 md:order-1">
             <div class="pf w-full aspect-[800/1200] max-w-sm mx-auto rounded-3xl">
-              <img src="Pasindu2.jpg" alt="Eliott" loading="lazy">
+              <img src="Pasindu1.png" alt="Eliott" loading="lazy">
             </div>
           </div>
 
@@ -587,7 +607,7 @@
               class="reveal d1 font-display font-bold text-4xl md:text-5xl text-zinc-900 dark:text-white leading-tight mb-6">
               A bit about<br>who I am</h2>
             <p class="reveal d2 text-zinc-500 dark:text-zinc-400 leading-relaxed mb-4">
-              I am currently working as an IT Support Technician. I am passionate about integrating Electronics and IT
+              I am currently working as a Web Administrator. I am passionate about integrating Electronics and IT
               to
               solve real-world
               problems.
@@ -896,7 +916,7 @@
             </div>
 
             <div class="reveal d2">
-              <form action="mailto:pdilmin40@gmail.com" method="POST" enctype="text/plain" novalidate>
+              <form id="contact-form" action="mailto:pdilmin40@gmail.com" method="POST" enctype="text/plain" novalidate>
                 <div class="flex flex-col gap-4">
                   <div class="grid sm:grid-cols-2 gap-4">
                     <div>
@@ -986,6 +1006,26 @@
         }
       }
     }
+  </script>
+
+  <script>
+    document.getElementById("contact-form").addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      emailjs.sendForm(
+        "service_iwqtxfd",
+        "template_3ldmjsw",
+        this
+      ).then(
+        function () {
+          alert("Message sent successfully!");
+        },
+        function (error) {
+          alert("Failed to send message.");
+          console.log(error);
+        }
+      );
+    });
   </script>
 
 </body>

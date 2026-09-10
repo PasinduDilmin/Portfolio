@@ -1,0 +1,33 @@
+import numpy as np
+import pandas as pd
+
+np.random.seed(42)
+
+# Generate 98 realistic income values centered around $60,000
+typical_incomes = np.random.normal(loc=60000, scale=10000, size=98)
+
+# Introduce 2 extreme outliers:
+outliers = np.array([-25000.0, 10000000.0])
+
+all_incomes = np.concatenate([typical_incomes, outliers])
+
+df = pd.DataFrame({'income': all_incomes})
+
+# Calculate Thresholds (1st & 99th Percentiles)
+lower_limit = df['income'].quantile(0.01)
+upper_limit = df['income'].quantile(0.99)
+
+print(upper_limit)
+# Clipping
+# Values below lower_limit are set to lower_limit
+# Values above upper_limit are set to upper_limit
+
+df['income_clipped'] = np.clip(df['income'], a_min=lower_limit, a_max=upper_limit)
+
+# Filter to view only the original extreme rows
+extreme_rows = df[(df['income'] < lower_limit) | (df['income'] > upper_limit)]
+
+#Displaying the summary
+summary = df[['income', 'income_clipped']].describe()
+summary.columns = ['Original Income', 'Clipped Income']
+print(summary.map(lambda x: f"{x:,.2f}"))
